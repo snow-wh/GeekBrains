@@ -1,6 +1,6 @@
-package package1;
+package lesson1.package1;
 
-import package2.Cat;
+import lesson1.package2.Cat;
 
 public class main2 {
 

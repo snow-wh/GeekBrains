@@ -1,4 +1,4 @@
-package package2;
+package lesson1.package2;
 
 public interface Eat {
 

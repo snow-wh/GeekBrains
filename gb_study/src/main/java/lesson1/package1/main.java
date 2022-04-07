@@ -1,9 +1,6 @@
-package package1;
+package lesson1.package1;
 
-import package2.Animal;
-import package2.Cat;
-
-import java.util.Arrays;
+import lesson1.package2.Cat;
 
 public class main {
 
