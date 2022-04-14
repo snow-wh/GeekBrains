@@ -14,7 +14,7 @@ public class main {
                 {"1","2","3","4"},
                 {"11","22","33","44"},
                 {"101","202","303","404"},
-                {"110","220","330","440"}
+                {"110","220","330","hellWorld"}
         };
 
         try {
@@ -30,7 +30,8 @@ public class main {
 
     public static int checkArray(String[][] array, int size) throws NuArraySizeException, MyArrayDataException {
 
-        if(array.length != size && array[0].length != size){
+
+        if(array.length != size || array[0].length != size){
             throw new NuArraySizeException();
         }
 
@@ -41,7 +42,7 @@ public class main {
                 try {
                     sum+=Integer.parseInt(array[i][j]);
                 }catch (NumberFormatException e){
-                    throw new MyArrayDataException(i,j);
+                    throw new MyArrayDataException(++i,++j);
                 }
 
             }
