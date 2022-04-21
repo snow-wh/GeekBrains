@@ -3,10 +3,12 @@ package lesson1.dz.people;
 import lesson1.dz.Competition.BaseCompetition;
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-public class People implements Moving {
+public class People implements Moving{
 
 
     private String name;
@@ -19,8 +21,16 @@ public class People implements Moving {
         this.name = name;
         this.heightJumpMeters = heightJumpMeters;
         this.hundredMeterRunTime = hundredMeterRunTime;
+        Check.setAllValue(1,2,3);
 
 
+
+
+    }
+
+    public static void main(String[] args) {
+        Check.setAllValue(1,2,3);
+        System.out.println(Check.Jump.getComplexity());
     }
 
     public <T extends BaseCompetition> void setResult(T competition, boolean result) {
