@@ -1,5 +1,6 @@
 package lesson3;
 
+import java.io.BufferedInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,9 +49,9 @@ public class main {
         System.out.println("- - - - - - - - - - - - -");
 
         List<Integer> listInt2 = new ArrayList<>();
-        listInt.add(6);
-        listInt.add(7);
-        listInt.add(8);
+        listInt2.add(6);
+        listInt2.add(7);
+        listInt2.add(8);
 
         NumberBox<Integer> numberBox3 = new NumberBox<>(listInt2);
 
@@ -61,6 +62,7 @@ public class main {
         */
         System.out.println(numberBox1.getListNumber());
         System.out.println(numberBox3.getListNumber());
+
 
     }
 
