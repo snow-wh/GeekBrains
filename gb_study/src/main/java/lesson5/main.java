@@ -102,13 +102,12 @@ public class main {
             e.printStackTrace();
         }
 
+
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String str;
             String[] strMass;
             while ((str = reader.readLine()) != null){
-              //  System.out.println(str);
                 strMass = str.split(";");
-                System.out.println(Arrays.toString(strMass));
             }
 
         } catch (IOException e) {
