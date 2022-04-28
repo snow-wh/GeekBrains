@@ -1,6 +1,8 @@
 package lesson6;
 
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import lesson6.jsonParse.Booking;
@@ -14,37 +16,37 @@ public class main {
 
     public static void main(String[] args) throws IOException {
 
-        String lastNameTest = "Tr";
-        String firstNameTest = "Es";
+//        String lastNameTest = "Tr";
+//        String firstNameTest = "Es";
         
 
-        RestAssured.baseURI = "https://restful-booker.herokuapp.com/booking/21";
+        RestAssured.baseURI = "http://dataservice.accuweather.com/";
         Response response = given()
                 .when()
-                .get();
+                .get("forecasts/v1/daily/5day/332287?apikey=yODGgbTvYC5fkSQNmG0rOnvPB1V8vo89");
 
         System.out.println(response.asPrettyString());
-
-        System.out.println();
-
-        Booking bookingClass = response.as(Booking.class);
-
-        System.out.println(bookingClass.getFirstname());
-        System.out.println(bookingClass.getLastname());
-
-        try {
-            if(bookingClass.getFirstname().equals(firstNameTest) && bookingClass.getLastname().equals(lastNameTest)){
-                System.out.println("Тест пройден");
-            }else {
-                throw new NoCompareException(bookingClass.getFirstname(),bookingClass.getLastname());
-            }
-
-
-        }catch (NoCompareException e){
-            e.printStackTrace();
-        }
-
-        System.out.println(bookingClass);
+//
+//        System.out.println();
+//
+//        Booking bookingClass = response.as(Booking.class);
+//
+//        System.out.println(bookingClass.getFirstname());
+//        System.out.println(bookingClass.getLastname());
+//
+//        try {
+//            if(bookingClass.getFirstname().equals(firstNameTest) && bookingClass.getLastname().equals(lastNameTest)){
+//                System.out.println("Тест пройден");
+//            }else {
+//                throw new NoCompareException(bookingClass.getFirstname(),bookingClass.getLastname());
+//            }
+//
+//
+//        }catch (NoCompareException e){
+//            e.printStackTrace();
+//        }
+//
+//        System.out.println(bookingClass);
 
         
 
